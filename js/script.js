@@ -1,4 +1,19 @@
-//JSnack 1
+//Dati per stampare in pagina
+const outputData = document.querySelector(".data-wrapper");
+const output1 = document.querySelector(".output-1");
+const output2a = document.querySelector(".output-2a");
+const output2b = document.querySelector(".output-2b");
+const output3a = document.querySelector(".output-3a");
+const output3b = document.querySelector(".output-3b");
+const output4a = document.querySelector(".output-4a");
+const output4b = document.querySelector(".output-4b");
+const output4c = document.querySelector(".output-4c");
+const output5a = document.querySelector(".output-5a");
+const output5b = document.querySelector(".output-5b");
+const output5c = document.querySelector(".output-5c");
+const output5d = document.querySelector(".output-5d");
+
+// ----- JSnack 1 ----- //
 const zuchinis = [
   {
     type: "nera",
@@ -52,7 +67,23 @@ const zuchinis = [
   },
 ];
 
-console.log("JSnack 1 - Peso totale zucchine: ", getTotalWeight(zuchinis));
+//Stampa dati
+zuchinis.forEach((zuchini) => {
+  outputData.innerHTML += createTemplate(zuchini);
+});
+
+function createTemplate(item) {
+  return `
+  <div class="data p-2">
+    <div>Tipologia: ${item.type}</div>
+    <div>Peso: ${item.weight} gr</div>
+    <div>Lunghezza: ${item.length} cm</div>
+  </div>
+  `;
+}
+
+//Stampa in pagina e Logica
+output1.innerHTML = getTotalWeight(zuchinis) + "gr";
 
 function getTotalWeight(zuchinisArray) {
   let totalWeight = 0;
@@ -65,7 +96,7 @@ function getTotalWeight(zuchinisArray) {
   return totalWeight;
 }
 
-//JSnack 2
+// ----- JSnack 2 ----- //
 const shortZuchinis = zuchinis.filter(
   (zuchini) => parseFloat(zuchini.length) < 15
 );
@@ -74,35 +105,26 @@ const longZuchinis = zuchinis.filter(
   (zuchini) => parseFloat(zuchini.length) >= 15
 );
 
-console.log(
-  "JSnack 2 - Peso totale zucchine corte: ",
-  getTotalWeight(shortZuchinis)
-);
-console.log(
-  "JSnack 2 - Peso totale zucchine lunghe: ",
-  getTotalWeight(longZuchinis)
-);
+output2a.innerHTML = getTotalWeight(shortZuchinis) + "gr";
+output2b.innerHTML = getTotalWeight(longZuchinis) + "gr";
 
-//JSnack 3
+// ----- JSnack 3 ----- //
 const string = "Zucchina";
 
-console.log("JSnack 3 - Parola da invertire: ", string);
-console.log("JSnack 3 - Parola invertita: ", reverseString(string));
+output3a.innerHTML = string;
+output3b.innerHTML = reverseString(string);
 
 function reverseString(stringToReverse) {
   return stringToReverse.split("").reverse().join("");
 }
 
-//JSnack 4
+// ----- JSnack 4 ----- //
 const arrayA = ["a", "b", "c", "d"];
 const arrayB = [1, 2, 3, 4];
 
-console.log("JSnack 4 - Primo array: ", arrayA);
-console.log("JSnack 4 - Secondo array: ", arrayB);
-console.log(
-  "JSnack 4 - Array elementi alternati: ",
-  getArrayAlt(arrayA, arrayB)
-);
+output4a.innerHTML = arrayA;
+output4b.innerHTML = arrayB;
+output4c.innerHTML = getArrayAlt(arrayA, arrayB);
 
 function getArrayAlt(firstArray, secondArray) {
   let arrayAlt = [];
@@ -113,16 +135,17 @@ function getArrayAlt(firstArray, secondArray) {
   return arrayAlt;
 }
 
-//JSnack 5
+// ----- JSnack 5 ----- //
 const array = ["zero", "uno", "due", "tre", "quattro", "cinque"];
 const numMin = Math.floor(Math.random() * array.length);
 const numMax = Math.floor(
   Math.random() * (array.length - (numMin + 1)) + numMin
 );
 
-console.log("JSnack 5 - Array: ", array);
-console.log("JSnack 5 - Minimo:", numMin, "Massimo:", numMax);
-console.log("JSnack 5 - Nuovo array: ", getNewArray(array, numMin, numMax));
+output5a.innerHTML = array;
+output5b.innerHTML = numMin;
+output5c.innerHTML = numMax;
+output5d.innerHTML = getNewArray(array, numMin, numMax);
 
 function getNewArray(oldArray, min, max) {
   const newArray = oldArray.filter(
