@@ -27,6 +27,12 @@ Crea 10 oggetti che rappresentano una zucchina. Dividi in due array separati le 
 
 Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC).
 
+### Svolgimento
+
+1. Utilizzando split e come separatore "", creare un array avente per elementi le singole lettere della stringa
+2. Utilizzando reverse, invertire gli elementi dell'array appena creato
+3. Utilizzando join e come separatore "", trasformare l'array in una stringa
+
 ## JSnack 4
 
 Scrivi una funzione che fonda due array (aventi lo stesso numero di elementi) prendendo alternativamente gli elementi da uno e dall’altro. Es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].

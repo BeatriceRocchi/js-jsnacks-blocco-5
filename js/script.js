@@ -83,5 +83,12 @@ console.log(
   getTotalWeight(longZuchinis)
 );
 
-console.log(shortZuchinis);
-console.log(longZuchinis);
+//JSnack 3
+const string = "Zucchina";
+
+console.log("JSnack 3 - Parola da invertire: ", string);
+console.log("JSnack 3 - Parola invertita: ", reverseString(string));
+
+function reverseString(stringToReverse) {
+  return stringToReverse.split("").reverse().join("");
+}
