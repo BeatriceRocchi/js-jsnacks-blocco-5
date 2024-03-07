@@ -112,3 +112,21 @@ function getArrayAlt(firstArray, secondArray) {
   }
   return arrayAlt;
 }
+
+//JSnack 5
+const array = ["zero", "uno", "due", "tre", "quattro", "cinque"];
+const numMin = Math.floor(Math.random() * array.length);
+const numMax = Math.floor(
+  Math.random() * (array.length - (numMin + 1)) + numMin
+);
+
+console.log("JSnack 5 - Array: ", array);
+console.log("JSnack 5 - Minimo:", numMin, "Massimo:", numMax);
+console.log("JSnack 5 - Nuovo array: ", getNewArray(array, numMin, numMax));
+
+function getNewArray(oldArray, min, max) {
+  const newArray = oldArray.filter(
+    (element, index) => index >= min && index <= max
+  );
+  return newArray;
+}

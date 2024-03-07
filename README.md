@@ -46,3 +46,9 @@ Scrivi una funzione che fonda due array (aventi lo stesso numero di elementi) pr
 
 Scrivi una funzione che accetti tre argomenti:
 un array e due numeri (“a” più piccolo di “b” e “b” grande al massimo quanto il numero di elementi dell’array). La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra “a” e “b”.
+
+### Svolgimento
+
+1. Creare due numeri random: il minimo compreso fra 0 e la lunghezza dell'array e il massimo compreso fra il minimo e la lunghezza dell'array
+2. Creare una funzione con parametri: array, minimo e massimo
+3. Nella funzione, creare con filter un nuovo array contenente solo gli elementi il cui indice è maggiore o uguale al minimo e inferiore o uguale al massimo
