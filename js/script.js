@@ -3,12 +3,12 @@ const zuchinis = [
   {
     type: "nera",
     weight: 50,
-    length: 7,
+    length: "15.6",
   },
   {
     type: "romanesca",
     weight: 120,
-    length: 9,
+    length: 20,
   },
   {
     type: "fiorentina",
@@ -33,17 +33,17 @@ const zuchinis = [
   {
     type: "gialla",
     weight: 83,
-    length: 10,
+    length: 18,
   },
   {
     type: "rugosa friulana",
     weight: 100,
-    length: 12,
+    length: 12.5,
   },
   {
     type: "patisson",
     weight: 70.5,
-    length: 8,
+    length: 20.2,
   },
   {
     type: "inglese",
@@ -52,10 +52,36 @@ const zuchinis = [
   },
 ];
 
-let totalWeight = 0;
+console.log("JSnack 1 - Peso totale zucchine: ", getTotalWeight(zuchinis));
 
-zuchinis.forEach(
-  (zuchini) => (totalWeight = totalWeight + parseFloat(zuchini.weight))
+function getTotalWeight(zuchinisArray) {
+  let totalWeight = 0;
+
+  zuchinisArray.forEach(
+    (zuchiniItem) =>
+      (totalWeight = totalWeight + parseFloat(zuchiniItem.weight))
+  );
+
+  return totalWeight;
+}
+
+//JSnack 2
+const shortZuchinis = zuchinis.filter(
+  (zuchini) => parseFloat(zuchini.length) < 15
 );
 
-console.log("JSnack 1 - Peso totale zucchine: ", totalWeight);
+const longZuchinis = zuchinis.filter(
+  (zuchini) => parseFloat(zuchini.length) >= 15
+);
+
+console.log(
+  "JSnack 2 - Peso totale zucchine corte: ",
+  getTotalWeight(shortZuchinis)
+);
+console.log(
+  "JSnack 2 - Peso totale zucchine lunghe: ",
+  getTotalWeight(longZuchinis)
+);
+
+console.log(shortZuchinis);
+console.log(longZuchinis);
