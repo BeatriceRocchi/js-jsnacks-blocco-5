@@ -92,3 +92,23 @@ console.log("JSnack 3 - Parola invertita: ", reverseString(string));
 function reverseString(stringToReverse) {
   return stringToReverse.split("").reverse().join("");
 }
+
+//JSnack 4
+const arrayA = ["a", "b", "c", "d"];
+const arrayB = [1, 2, 3, 4];
+
+console.log("JSnack 4 - Primo array: ", arrayA);
+console.log("JSnack 4 - Secondo array: ", arrayB);
+console.log(
+  "JSnack 4 - Array elementi alternati: ",
+  getArrayAlt(arrayA, arrayB)
+);
+
+function getArrayAlt(firstArray, secondArray) {
+  let arrayAlt = [];
+  for (let i = 0; i < firstArray.length; i++) {
+    arrayAlt.push(firstArray[i]);
+    arrayAlt.push(secondArray[i]);
+  }
+  return arrayAlt;
+}

@@ -37,6 +37,11 @@ Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (
 
 Scrivi una funzione che fonda due array (aventi lo stesso numero di elementi) prendendo alternativamente gli elementi da uno e dall’altro. Es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
 
+### Svolgimento
+
+1. Inizializzare un array vuoto in cui andranno inseriti alternativamente gli elementi dei due array
+2. Attraverso un ciclo for, ad ogni ciclo pushare l'elemento ad indice i del primo array e in seguito l'elemento ad indice i del secondo array
+
 ## JSnack 5
 
 Scrivi una funzione che accetti tre argomenti:
